@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Note</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body class="create_body">
+    <h1 class="create_h1">Create a Note</h1>
+    <form method="POST" class="create_form">
+        {% csrf_token %}
+        
+        <input type="text" placeholder="Title" name="title" class="create_input"><br><br>
+
+        <textarea placeholder="Content" name="content" class="create_textarea"></textarea><br><br>
+
+        <button type="submit" class="create_button">Create Note</button>
+    </form>
+</body>
+</html> 

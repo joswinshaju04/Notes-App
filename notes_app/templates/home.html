@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header class="header-container">
+        <h2>Notes App</h2>
+        <div>
+            <input type="text" placeholder="Search notes...">
+            <button type="submit">Search</button>
+            <a href="{% url 'logout' %}" class="create-btn">Logout</a>
+        </div>
+    </header>
+    <section>
+
+        <div class="top-section">
+            <div class="welcome">
+                <h2>Welcome, {{ request.user.username }}</h2>
+                <p>Here are your notes:</p>
+            </div>
+
+            <div>
+                <a href="{% url 'create_note' %}" class="create-btn">+ Create Note</a>
+            </div>
+        </div>
+
+        <div class="notes-container"    >
+            {% for i in items %}
+
+            <div class="note-card">
+                <h3>{{ i.title }}</h3>
+                <p>{{ i.content }}</p>
+
+                <button class="edit-btn">
+                    <a href="{% url 'update' i.id %}">Edit</a>
+                </button>
+
+                <button class="delete-btn">
+                    <a href="{% url 'delete' i.id %}">Delete</a>
+                </button>
+            </div>
+
+            {% endfor %}
+        </div>
+
+</section>     
+</body>
+</html>
