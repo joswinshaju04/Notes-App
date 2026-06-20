@@ -171,6 +171,18 @@ section{
     align-items:flex-start;
 }
 
+.category{
+    display:inline-block;
+    background:#E8EAFD;
+    color:#4F46E5;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:8px;
+    font-weight:600;
+    margin:8px 0 15px 0;
+    text-transform:capitalize;
+}
+
 .note-card{
     background:white;
     width:250px;
@@ -212,6 +224,7 @@ section{
     text-align:center;
     cursor:pointer;
     margin-bottom:10px;
+   
 }
 
 .edit-btn{
@@ -229,8 +242,6 @@ section{
 .delete-btn:hover{
     background:#bb2d3b;
 }
-
-
 
 .body_register{
     background:#f4f6f9;
@@ -298,6 +309,7 @@ section{
 }
 
 .create_form{
+    
     width:450px;
     background:#fff;
     padding:30px;
@@ -307,7 +319,7 @@ section{
 
 .create_h1{
     position:absolute;
-    top:100px;
+    top:110px;
     color:#4F46E5;
     font-size:30px;
 }
@@ -320,6 +332,9 @@ section{
     border-radius:8px;
     font-size:15px;
     outline:none;
+}
+.create_input{
+    margin-top:28px;
 }
 
 .create_textarea{
@@ -417,4 +432,37 @@ section{
 
 .back-btn:hover{
     text-decoration:underline;
+}
+
+
+
+.category_select{
+    width:100%;
+    height:40px;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    background:#fff;
+    color:#7e7d7d;
+    font-size:12px;
+    cursor:pointer;
+    background-color:#ffffff;
+}
+
+.category_select:focus{
+    border-color:#4F46E5;
+    box-shadow:0 0 5px rgba(79,70,229,0.2);
+}
+
+.category{
+    display:inline-block;
+    background:#E8EAFD;
+    color:#4F46E5;
+    padding:6px 12px;
+    border-radius:10px;
+    font-size:12px;
+    font-weight:600;
+    text-transform:capitalize;
+    width:fit-content;
 }

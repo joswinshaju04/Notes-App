@@ -36,7 +36,8 @@ def create_note(request):
     if request.method == 'POST':
         a=request.POST.get('title')
         b=request.POST.get('content')
-        notes.objects.create(title=a, content=b, user=request.user)
+        c=request.POST.get('category')
+        notes.objects.create(title=a, content=b, category=c, user=request.user)
         return redirect('home')
     return render(request, 'create_note.html')
 
@@ -52,9 +53,10 @@ def update_note(request, id):
     if request.method == 'POST' :
         a.title=request.POST.get('title')
         a.content=request.POST.get('content')
+        a.category=request.POST.get('category')
         a.save()
         return redirect('home')
-    return render(request, 'update_note.html', {'note': a})    
+    return render(request, 'update_note.html', {'a': a})    
 
 
 def logout_user(request):

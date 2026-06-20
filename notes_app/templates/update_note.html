@@ -16,6 +16,15 @@
 
     <input type="text" name="title" value="{{ note.title }}" placeholder="Title" class="input" required>
 
+    <select class="category_select" name="category" required>
+        <option value="Personal" {% if note.category == "Personal" %}selected{% endif %}>Personal</option>
+        <option value="Work" {% if note.category == "Work" %}selected{% endif %}>Work</option>
+        <option value="Study" {% if note.category == "Study" %}selected{% endif %}>Study</option>
+        <option value="Shopping" {% if note.category == "Shopping" %}selected{% endif %}>Shopping</option>
+        <option value="Ideas" {% if note.category == "Ideas" %}selected{% endif %}>Ideas</option>
+        <option value="Others" {% if note.category == "Others" %}selected{% endif %}>Others</option>
+    </select>
+
     <textarea name="content" placeholder="Write your note here..." class="textarea" required >{{ note.content }}</textarea>
 
     <button type="submit" class="button">Update Note</button>
