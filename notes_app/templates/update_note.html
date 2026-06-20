@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body class="update_body">
-
+    <header class="header-container">
+        <a href="{% url 'home' %}" class="header_name">Notes App</a>
+        <div>
+            <input type="text" placeholder="Search notes...">
+            <button type="submit">Search</button>
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+        </div>
+    </header>  
 <form method="POST" class="update_form">
     {% csrf_token %}
 

@@ -9,11 +9,15 @@
 </head>
 <body>
     <header class="header-container">
-        <h2>Notes App</h2>
+        <div class="logo-header">
+            <img src="{% static 'images/tool.png' %}" alt="Logo">
+            <a href="{% url 'home' %}" class="header_name">Notes App</a>
+        </div>
+        
         <div>
             <input type="text" placeholder="Search notes...">
             <button type="submit">Search</button>
-            <a href="{% url 'logout' %}" class="create-btn">Logout</a>
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
         </div>
     </header>
     <section>

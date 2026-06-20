@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body class="create_body">
-    <h1 class="create_h1">Create a Note</h1>
+    <header class="header-container">
+        <a href="{% url 'home' %}" class="header_name">Notes App</a>
+        <div>
+            <input type="text" placeholder="Search notes...">
+            <button type="submit">Search</button>
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+        </div>
+    </header>    
     <form method="POST" class="create_form">
+
         {% csrf_token %}
-        
+        <h1 class="create_h1">Create a Note</h1>
         <input type="text" placeholder="Title" name="title" class="create_input"><br><br>
 
         <select class="category_select" name="category" required>

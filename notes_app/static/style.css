@@ -6,7 +6,7 @@
 }
 
 .login-body{
-    background:#f4f6f9;
+    background:#f0f6ff;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -88,24 +88,41 @@
 
 
 body{
-    background:#f4f6f9;
+    background:#eaf4f8;
+}
+
+.logo-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 
-
+.logo-header img{
+    width:40px;
+    height:40px;
+}
+.header_name{
+    font-size:24px;
+    color:#4F46E5;
+    font-weight:bold;
+    text-decoration:none;
+}
 .header-container{
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px 50px;
-    background:#4F46E5;
-    color:white;
+    background:#ffffff;
+    color:#4F46E5;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
 .header-container input{
     padding:10px;
     width:250px;
-    border:none;
+    border:1px solid #ccc;
     border-radius:8px;
     outline:none;
 }
@@ -119,10 +136,23 @@ body{
     cursor:pointer;
     font-weight:bold;
     margin-left:10px;
+    border:1px solid #4F46E5;
 }
 
 .header-container button:hover{
     background:#ececec;
+}
+
+.logout-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#4F46E5;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    transition:.3s;
+    height:40px;
+    text-align:center;
 }
 
 section{
@@ -244,8 +274,9 @@ section{
 }
 
 .body_register{
-    background:#f4f6f9;
+    background:#eaf4f8;
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
     height:100vh;
@@ -301,15 +332,15 @@ section{
 }
 
 .create_body{
-    background:#f4f6f9;
+    background:#eaf4f8;
     display:flex;
-    justify-content:center;
+    flex-direction: column;  
     align-items:center;
     height:100vh;
 }
 
 .create_form{
-    
+    margin-top:50px;
     width:450px;
     background:#fff;
     padding:30px;
@@ -318,10 +349,9 @@ section{
 }
 
 .create_h1{
-    position:absolute;
-    top:110px;
+   text-align:center;
     color:#4F46E5;
-    font-size:30px;
+    font-size:25px;
 }
 
 .create_input,
@@ -360,14 +390,15 @@ section{
 
 
 .update_body{
-    background:#f4f6f9;
+    background:#eaf4f8;
     display:flex;
-    justify-content:center;
+    flex-direction: column;
     align-items:center;
     height:100vh;
 }
 
 .update_form{
+    margin-top:50px;
     width:450px;
     background:#fff;
     padding:35px;
