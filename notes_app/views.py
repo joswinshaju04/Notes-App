@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .models import notes
 from django.contrib.auth import logout
+
+
 def login_page(request):
     if request.method == 'POST':
         a=request.POST.get('username')
