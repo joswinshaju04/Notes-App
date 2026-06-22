@@ -104,10 +104,11 @@ body{
 }
 .header_name{
     font-size:24px;
-    color:#4F46E5;
+    color: #2563EB;
     font-weight:bold;
-    text-decoration:none;
+    text-decoration:none; 
 }
+
 .header-container{
     width:100%;
     display:flex;
@@ -142,6 +143,10 @@ body{
 .header-container button:hover{
     background:#ececec;
 }
+.search-box{
+    display:flex;
+    align-items:center;
+}
 
 .logout-btn{
     display:inline-block;
@@ -153,6 +158,11 @@ body{
     transition:.3s;
     height:40px;
     text-align:center;
+    margin: 10px;
+}
+
+.logout-btn:hover{
+    background:#4338CA;
 }
 
 section{
@@ -175,6 +185,7 @@ section{
 
 .welcome p{
     color:#666;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -191,7 +202,6 @@ section{
 .create-btn:hover{
     background:#4338CA;
 }
-
 
 
 .notes-container{

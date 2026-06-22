@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .models import notes
 from django.contrib.auth import logout
-
+from django.db.models import Q
 
 def login_page(request):
     if request.method == 'POST':
@@ -31,6 +31,13 @@ def register(request):
 @login_required
 def home(request):
     items=notes.objects.filter(user=request.user)
+    query = request.GET.get('search')
+    if query:
+        items = items.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query) |
+            Q(category__icontains=query)
+        )
     return render(request, 'home.html' , {'items': items})
 
 @login_required

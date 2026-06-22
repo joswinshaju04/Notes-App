@@ -14,9 +14,11 @@
             <a href="{% url 'home' %}" class="header_name">Notes App</a>
         </div>
         
-        <div>
-            <input type="text" placeholder="Search notes...">
-            <button type="submit">Search</button>
+        <div class="search-box">
+            <form method="GET" action="{% url 'home' %}">
+                <input type="text" name="search" placeholder="Search notes..." value="{{ request.GET.search }}">
+                <button type="submit">Search</button>
+            </form>
             <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
         </div>
     </header>
