@@ -40,7 +40,7 @@
             <div class="note-card">
                 <h3>{{ i.title }}</h3>
                 <span class="category">{{ i.category }}</span>
-                <p>{{ i.content }}</p>
+                <p class="note-content">{{ i.content|linebreaksbr }}</p>
                     <a href="{% url 'update' i.id %}" class="edit-btn">Edit</a>
                     <a href="{% url 'delete' i.id %}" class="delete-btn">Delete</a>
             </div>
